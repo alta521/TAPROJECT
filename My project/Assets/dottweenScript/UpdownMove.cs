@@ -3,11 +3,16 @@ using DG.Tweening; // Dotween 네임스페이스
 
 public class UpdownMove : MonoBehaviour
 {
-    public float want;
-    public float speed;
+    public float want;  // 목표 위치 (Y축)
+    public float speed; // 이동 속도
+
     void Start()
     {
-        // 오브젝트를 3초 동안 위에서 아래로 (Y축 0) 이동
+        // Y축 이동
         transform.DOMoveY(want, speed).SetEase(Ease.Linear);
+
+        // Z축 회전 (10도 회전)
+        transform.DORotate(new Vector3(0, 0, 10), speed, RotateMode.FastBeyond360).SetEase(Ease.Linear);
     }
 }
+
