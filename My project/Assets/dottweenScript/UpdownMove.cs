@@ -1,5 +1,5 @@
 using UnityEngine;
-using DG.Tweening; // Dotween 네임스페이스
+using DG.Tweening; 
 
 public class UpdownMove : MonoBehaviour
 {
